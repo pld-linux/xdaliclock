@@ -5,12 +5,13 @@ Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
 Version:	2.18
-Release:	8
+Release:	9
 License:	MIT
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
+# Source0-md5:	286c2c2ca9aa12b8ee6e58dda1ca1739
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-shape-cycle.patch
