@@ -4,7 +4,7 @@ Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
 Version:	2.20
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Applications
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
