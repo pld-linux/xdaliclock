@@ -1,6 +1,5 @@
 Summary:	Marc's favorite clock
 Summary(de):	Marcs Lieblingsuhr
-Summary(fr):	Marc's favorite clock
 Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
