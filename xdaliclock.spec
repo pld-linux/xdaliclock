@@ -48,7 +48,7 @@ wy¶wietlaæ inne czcionki.
 
 %build
 cd X11
-CFLAGS="%{rpmcflags} -D_GNU_SOURCE" 
+CFLAGS="%{rpmcflags} -D_GNU_SOURCE"
 autoconf
 %configure
 %{__make}
