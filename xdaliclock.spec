@@ -5,7 +5,7 @@ Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
 Version:	2.18
-Release:	6
+Release:	8
 License:	MIT
 Group:		X11/Applications
 Group(de):	X11/Applikationen
@@ -15,9 +15,11 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-shape-cycle.patch
 Patch1:		%{name}-DESTDIR.patch
+Patch2:		%{name}-time.patch
 Icon:		xdaliclock.xpm
 URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -44,11 +46,14 @@ wy¶wietlaæ inne czcionki.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 cd X11
+CFLAGS="%{rpmcflags} -D_GNU_SOURCE" 
+autoconf
 %configure
-%{__make} _GNU_SOURCE=1
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
