@@ -4,7 +4,7 @@ Summary(fr): Marc's favorite clock.
 Summary(pl): Ulubiony zegar Marca
 Summary(tr): Marc'ýn gözde saati
 Name:        xdaliclock
-Version:     2.13
+Version:     2.14
 Release:     1
 Group:       X11/Utilities
 Copyright:   MIT
