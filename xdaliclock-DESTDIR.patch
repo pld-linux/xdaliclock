@@ -1,0 +1,18 @@
+diff -Nru xdaliclock-2.17/X11/Makefile.in xdaliclock-2.17.new/X11/Makefile.in
+--- xdaliclock-2.17/X11/Makefile.in	Mon Nov 29 11:17:10 1999
++++ xdaliclock-2.17.new/X11/Makefile.in	Mon Mar  6 02:40:02 2000
+@@ -78,10 +78,12 @@
+ 		install
+ 
+ install-program: $(EXES)
+-	$(INSTALL_PROGRAM) xdaliclock $(install_prefix)$(bindir)/xdaliclock
++	$(INSTALL) -d $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) xdaliclock $(DESTDIR)$(bindir)/xdaliclock
+ 
+ install-man: xdaliclock.man
+-	$(INSTALL_DATA) $(srcdir)/xdaliclock.man $(install_prefix)$(man1dir)/xdaliclock.1
++	$(INSTALL) -d $(DESTDIR)$(man1dir)
++	$(INSTALL_DATA) $(srcdir)/xdaliclock.man $(DESTDIR)$(man1dir)/xdaliclock.1
+ 
+ uninstall-program:
+ 	rm -f $(install_prefix)$(bindir)/xdaliclock
