@@ -3,8 +3,8 @@ Summary(de):	Marcs Lieblingsuhr
 Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
-Version:	2.18
-Release:	8
+Version:	2.19
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
@@ -12,7 +12,6 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-shape-cycle.patch
 Patch1:		%{name}-DESTDIR.patch
-Patch2:		%{name}-time.patch
 Icon:		xdaliclock.xpm
 URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	XFree86-devel
@@ -43,7 +42,6 @@ wy¶wietlaæ inne czcionki.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 cd X11
