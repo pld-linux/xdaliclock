@@ -59,8 +59,8 @@ cd X11
 %{__make} install install-man DESTDIR=$RPM_BUILD_ROOT
 
 install XDaliClock.ad $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/XDaliClock
-install {SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
-install {SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
