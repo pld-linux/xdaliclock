@@ -43,7 +43,6 @@ wy¶wietlaæ inne czcionki.
 
 %build
 cd X11
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
@@ -55,8 +54,6 @@ cd X11
 %{__make} install install-man DESTDIR=$RPM_BUILD_ROOT
 
 install XDaliClock.ad $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/XDaliClock
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
