@@ -1,0 +1,10 @@
+--- xdaliclock-2.13/digital.c.orig	Wed Nov 11 14:39:17 1998
++++ xdaliclock-2.13/digital.c	Wed Nov 11 14:41:04 1998
+@@ -1279,7 +1279,6 @@
+             XShapeCombineMask (dpy, window, ShapeBounding,
+                                window_offset_x, window_offset_y,
+                                pixmap, ShapeSet);
+-          else
+ #endif /* SHAPE */
+             /* sends 28 bytes */
+             XCopyPlane (dpy, pixmap, window, window_draw_gc, 0, 0,
