@@ -62,10 +62,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %{_libdir}/X11/app-defaults/XDaliClock
 %{_mandir}/man1/*
-
-%changelog
-* Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [2.14-1]
-- package is FHS 2.0 compliant,
-- spec file based on RH version; modified for PLD use by me 
-  and Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>.
