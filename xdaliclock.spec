@@ -14,7 +14,7 @@ Patch0:		xdaliclock-shape-cycle.patch
 Patch1:		xdaliclock-DESTDIR.patch
 URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	XFree86-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
