@@ -2,7 +2,9 @@
 Name=xdaliclock
 Comment=Marc's favorite clock
 Comment[es]=Reloj favorito del Marc
-Comment[pt_BR]=Rel�gio favorito do Marc
+Comment[pl]=Ulubiony zegar Marka
+Comment[pt]=Relógio favorito do Marc
+Comment[pt_BR]=Relógio favorito do Marc
 Icon=xdaliclock.png
 Exec=xdaliclock
 Terminal=0
