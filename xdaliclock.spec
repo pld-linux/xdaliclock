@@ -4,7 +4,7 @@ Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
 Version:	2.20
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Applications
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
@@ -54,14 +54,14 @@ CFLAGS="%{rpmcflags} -D_GNU_SOURCE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_appdefsdir},%{_pixmapsdir},%{_applnkdir}/Amusements}
+install -d $RPM_BUILD_ROOT{%{_appdefsdir},%{_pixmapsdir},%{_desktopdir}}
 
 cd X11
 %{__make} install install-man \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install XDaliClock.ad $RPM_BUILD_ROOT%{_appdefsdir}/XDaliClock
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -72,5 +72,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %{_appdefsdir}/XDaliClock
 %{_mandir}/man1/*
-%{_applnkdir}/Amusements/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
