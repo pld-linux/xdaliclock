@@ -54,7 +54,7 @@ CFLAGS="%{rpmcflags} -D_GNU_SOURCE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_appdefsdir},%{_pixmapsdir},%{_applnkdir}/Amusements}
+install -d $RPM_BUILD_ROOT{%{_appdefsdir},%{_pixmapsdir},%{_applnkdir}/Amusements}
 
 cd X11
 %{__make} install install-man \
