@@ -17,9 +17,9 @@ Icon:		xdaliclock.xpm
 URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
 
 %description
@@ -45,6 +45,7 @@ wy¶wietlaæ inne czcionki.
 %patch1 -p1
 
 %build
+cp -f /usr/share/automake/config.sub .
 cd X11
 CFLAGS="%{rpmcflags} -D_GNU_SOURCE"
 %{__autoconf}
