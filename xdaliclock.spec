@@ -16,6 +16,7 @@ BuildPrereq:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define	_prefix	/usr/X11R6
+%define _mandir %{_prefix}/man
 
 %description
 The xdaliclock program displays a digital clock; when a digit changes, it
