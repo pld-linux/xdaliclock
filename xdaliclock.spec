@@ -4,14 +4,15 @@ Summary(fr):	Marc's favorite clock.
 Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
-Version:	2.14
+Version:	2.18
 Release:	3
 Copyright:      MIT
 Group:		X11/Utilities
 Group(pl):	X11/Narzêdzia
-URL:            http://www.jwz.org/xdaliclock/
-Source:		ftp://ftp.x.org/contrib/applications/%{name}-%{version}.tar.gz
-Patch:		xdaliclock-shape-cycle.patch
+Source:		http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
+Patch0:		xdaliclock-shape-cycle.patch
+Patch1:		xdaliclock-DESTDIR.patch
+URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
@@ -37,20 +38,23 @@ inne czcionki.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
-xmkmf
-make CXXDEBUGFLAGS="$RPM_OPT_FLAGS" \
-	CDEBUGFLAGS="$RPM_OPT_FLAGS"
+cd X11
+LDFLAGS="-s"; export LDFLAGS
+%configure
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/
 
-make install install.man \
-	DESTDIR=$RPM_BUILD_ROOT \
-	MANDIR=%{_mandir}/man1 \
-	BINDIR=%{_bindir} 
+cd X11
+make install install-man DESTDIR=$RPM_BUILD_ROOT
+
+install XDaliClock.ad $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/XDaliClock
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
