@@ -52,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/
 
 cd X11
-make install install-man DESTDIR=$RPM_BUILD_ROOT
+%{__make} install install-man DESTDIR=$RPM_BUILD_ROOT
 
 install XDaliClock.ad $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/XDaliClock
 
