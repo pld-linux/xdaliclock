@@ -1,0 +1,11 @@
+--- xdaliclock-2.18/X11/digital.c.foo	Mon Feb 12 17:29:42 2001
++++ xdaliclock-2.18/X11/digital.c	Mon Feb 12 17:29:52 2001
+@@ -16,6 +16,8 @@
+ #endif
+ 
+ #include <stdio.h>
++#include <sys/time.h>
++#include <time.h>
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+ #include <X11/Xos.h>
