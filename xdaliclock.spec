@@ -12,7 +12,7 @@ Group(pl):	X11/Narzêdzia
 URL:            http://www.jwz.org/xdaliclock/
 Source:		ftp://ftp.x.org/contrib/applications/%{name}-%{version}.tar.gz
 Patch:		xdaliclock-shape-cycle.patch
-BuildPrereq:	XFree86-devel
+BuildRequires:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define	_prefix	/usr/X11R6
