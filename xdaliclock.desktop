@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=xdaliclock
+Comment=Marc's favorite clock
+Comment[es]=Reloj favorito del Marc
+Comment[pt_BR]=Relógio favorito do Marc
+Icon=xdaliclock.png
+Exec=xdaliclock
+Terminal=0
+Type=Application
