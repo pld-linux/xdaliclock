@@ -15,7 +15,7 @@ Patch:		xdaliclock-shape-cycle.patch
 BuildPrereq:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define	_prefix		/usr/X11R6
+%define	_prefix	/usr/X11R6
 
 %description
 The xdaliclock program displays a digital clock; when a digit changes, it
@@ -46,10 +46,10 @@ make CXXDEBUGFLAGS="$RPM_OPT_FLAGS" \
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make DESTDIR=$RPM_BUILD_ROOT \
+make install install.man \
+	DESTDIR=$RPM_BUILD_ROOT \
 	MANDIR=%{_mandir}/man1 \
-	BINDIR=%{_bindir} \
-	install install.man
+	BINDIR=%{_bindir} 
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
@@ -63,20 +63,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
-* Sun Nov 15 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.13-1]
-- changed Buildroot to /tmp/%%{name}-%%{version}-root,
-- added using %%{name} and %%{version} in Source,
-- added using $RPM_OPT_FLAGS during compile,
-- added pl translation,
-- added URL field,
-- added full %attr description in %files.
-
-* Wed Aug 12 1998 Jeff Johnson <jbj@redhat.com>
-- build root
-
-* Thu May 07 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Mon Jul 21 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
+* Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
+  [2.14-1]
+- package is FHS 2.0 compliant,
+- spec file based on RH version; modified for PLD use by me 
+  and Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>.
