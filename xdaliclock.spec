@@ -8,8 +8,6 @@ Version:	2.18
 Release:	8
 License:	MIT
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(pl):	X11/Aplikacje
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
