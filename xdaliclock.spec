@@ -32,7 +32,7 @@ p³ynnie przechodz± jedna w drug±.
 Mo¿e on wyswietlaæ czas w uk³adzie 12 i 24 godziny. Wy¶wietla on tak¿e datê
 kiedy przyci¶nie siê przycisk myszki maj±c kursor nad okienkiem zegarka.
 W program s± wbudowane dwa zestawy du¿ych fontów ale mo¿e on wy¶wietlaæ
-inne fonty.
+inne czcionki.
 
 %prep
 %setup -q
