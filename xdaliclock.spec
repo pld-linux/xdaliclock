@@ -1,17 +1,21 @@
 Summary:	Marc's favorite clock
 Summary(de):	Marcs Lieblingsuhr
-Summary(fr):	Marc's favorite clock.
+Summary(fr):	Marc's favorite clock
 Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
 Version:	2.18
-Release:	3
-Copyright:	MIT
-Group:		X11/Utilities
-Group(pl):	X11/Narzêdzia
+Release:	6
+License:	MIT
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
-Patch0:		xdaliclock-shape-cycle.patch
-Patch1:		xdaliclock-DESTDIR.patch
+Source1:	%{name}.desktop
+Source2:	%{name}.png
+Patch0:		%{name}-shape-cycle.patch
+Patch1:		%{name}-DESTDIR.patch
+Icon:		xdaliclock.xpm
 URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -44,16 +48,19 @@ wy¶wietlaæ inne czcionki.
 %build
 cd X11
 %configure
-%{__make}
+%{__make} _GNU_SOURCE=1
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/
+install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/ \
+	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Amusements}
 
 cd X11
 %{__make} install install-man DESTDIR=$RPM_BUILD_ROOT
 
 install XDaliClock.ad $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/XDaliClock
+install {SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
+install {SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -63,3 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %{_libdir}/X11/app-defaults/XDaliClock
 %{_mandir}/man1/*
+%{_applnkdir}/Amusements/*
+%{_pixmapsdir}/*
