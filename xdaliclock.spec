@@ -6,10 +6,10 @@ Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
 Version:	2.18
 Release:	3
-Copyright:      MIT
+Copyright:	MIT
 Group:		X11/Utilities
 Group(pl):	X11/Narzêdzia
-Source:		http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
+Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
 Patch0:		xdaliclock-shape-cycle.patch
 Patch1:		xdaliclock-DESTDIR.patch
 URL:		http://www.jwz.org/xdaliclock/
@@ -20,21 +20,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define 	_mandir 	%{_prefix}/man
 
 %description
-The xdaliclock program displays a digital clock; when a digit changes, it
-"melts" into its new shape.
+The xdaliclock program displays a digital clock; when a digit changes,
+it "melts" into its new shape.
 
-It can display in 12 or 24 hour modes, and displays the date when a mouse
-button is held down.  It has two large fonts built into it, but it can animate
-other fonts.
+It can display in 12 or 24 hour modes, and displays the date when a
+mouse button is held down. It has two large fonts built into it, but
+it can animate other fonts.
 
 %description -l pl
-Program xdaliclock wy¶wietla cyfrowy zegar, w którym zmieniaj±ce siê cyfry
-p³ynnie przechodz± jedna w drug±.
+Program xdaliclock wy¶wietla cyfrowy zegar, w którym zmieniaj±ce siê
+cyfry p³ynnie przechodz± jedna w drug±.
 
-Mo¿e on wyswietlaæ czas w uk³adzie 12 i 24 godziny. Wy¶wietla on tak¿e datê
-kiedy przyci¶nie siê przycisk myszki maj±c kursor nad okienkiem zegarka.
-W program s± wbudowane dwa zestawy du¿ych fontów ale mo¿e on wy¶wietlaæ
-inne czcionki.
+Mo¿e on wyswietlaæ czas w uk³adzie 12 i 24 godziny. Wy¶wietla on tak¿e
+datê kiedy przyci¶nie siê przycisk myszki maj±c kursor nad okienkiem
+zegarka. W program s± wbudowane dwa zestawy du¿ych fontów ale mo¿e on
+wy¶wietlaæ inne czcionki.
 
 %prep
 %setup -q
