@@ -4,7 +4,7 @@ Summary(pl):	Ulubiony zegar Marca
 Summary(tr):	Marc'ýn gözde saati
 Name:		xdaliclock
 Version:	2.20
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Applications
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
@@ -20,7 +20,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_mandir 	%{_prefix}/man
+%define		_appdefsdir	/usr/X11R6/lib/X11/app-defaults
 
 %description
 The xdaliclock program displays a digital clock; when a digit changes,
@@ -54,13 +54,13 @@ CFLAGS="%{rpmcflags} -D_GNU_SOURCE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/ \
-	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Amusements}
+install -d $RPM_BUILD_ROOT%{_appdefsdir},%{_pixmapsdir},%{_applnkdir}/Amusements}
 
 cd X11
-%{__make} install install-man DESTDIR=$RPM_BUILD_ROOT
+%{__make} install install-man \
+	DESTDIR=$RPM_BUILD_ROOT
 
-install XDaliClock.ad $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/XDaliClock
+install XDaliClock.ad $RPM_BUILD_ROOT%{_appdefsdir}/XDaliClock
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
-%{_libdir}/X11/app-defaults/XDaliClock
+%{_appdefsdir}/XDaliClock
 %{_mandir}/man1/*
 %{_applnkdir}/Amusements/*
 %{_pixmapsdir}/*
