@@ -8,6 +8,7 @@ Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
+# Source0-md5:	6fbcb06f1ce73a0fcc4d5354a05561e1
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-shape-cycle.patch
