@@ -10,5 +10,5 @@ Exec=xdaliclock
 Terminal=false
 Type=Application
 Encoding=UTF-8
-Categories=Amusement;
+Categories=Utility;Clock;
 # vi: encoding=utf-8
