@@ -13,7 +13,6 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-shape-cycle.patch
 Patch1:		%{name}-DESTDIR.patch
-Icon:		xdaliclock.xpm
 URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
