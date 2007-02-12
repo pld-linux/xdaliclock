@@ -1,7 +1,7 @@
 Summary:	Marc's favorite clock
-Summary(de):	Marcs Lieblingsuhr
-Summary(pl):	Ulubiony zegar Marca
-Summary(tr):	Marc'ın gözde saati
+Summary(de.UTF-8):   Marcs Lieblingsuhr
+Summary(pl.UTF-8):   Ulubiony zegar Marca
+Summary(tr.UTF-8):   Marc'Ä±n gÃ¶zde saati
 Name:		xdaliclock
 Version:	2.23
 Release:	1
@@ -29,14 +29,14 @@ It can display in 12 or 24 hour modes, and displays the date when a
 mouse button is held down. It has two large fonts built into it, but
 it can animate other fonts.
 
-%description -l pl
-Program xdaliclock wy¶wietla cyfrowy zegar, w którym zmieniaj±ce siê
-cyfry p³ynnie przechodz± jedna w drug±.
+%description -l pl.UTF-8
+Program xdaliclock wyÅ›wietla cyfrowy zegar, w ktÃ³rym zmieniajÄ…ce siÄ™
+cyfry pÅ‚ynnie przechodzÄ… jedna w drugÄ….
 
-Mo¿e on wy¶wietlaæ czas w uk³adzie 12 i 24 godziny. Wy¶wietla on tak¿e
-datê kiedy przyci¶nie siê przycisk myszki maj±c kursor nad okienkiem
-zegarka. W program s± wbudowane dwa zestawy du¿ych fontów ale mo¿e on
-wy¶wietlaæ inne czcionki.
+MoÅ¼e on wyÅ›wietlaÄ‡ czas w ukÅ‚adzie 12 i 24 godziny. WyÅ›wietla on takÅ¼e
+datÄ™ kiedy przyciÅ›nie siÄ™ przycisk myszki majÄ…c kursor nad okienkiem
+zegarka. W program sÄ… wbudowane dwa zestawy duÅ¼ych fontÃ³w ale moÅ¼e on
+wyÅ›wietlaÄ‡ inne czcionki.
 
 %prep
 %setup -q
