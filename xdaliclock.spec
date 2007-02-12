@@ -1,7 +1,7 @@
 Summary:	Marc's favorite clock
-Summary(de.UTF-8):   Marcs Lieblingsuhr
-Summary(pl.UTF-8):   Ulubiony zegar Marca
-Summary(tr.UTF-8):   Marc'ın gözde saati
+Summary(de.UTF-8):	Marcs Lieblingsuhr
+Summary(pl.UTF-8):	Ulubiony zegar Marca
+Summary(tr.UTF-8):	Marc'ın gözde saati
 Name:		xdaliclock
 Version:	2.23
 Release:	1
