@@ -19,7 +19,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_appdefsdir	/usr/X11R6/lib/X11/app-defaults
+%define		_appdefsdir	%{_datadir}/X11/app-defaults
 
 %description
 The xdaliclock program displays a digital clock; when a digit changes,
