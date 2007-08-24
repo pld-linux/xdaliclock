@@ -14,9 +14,11 @@ Source2:	%{name}.png
 Patch0:		%{name}-shape-cycle.patch
 Patch1:		%{name}-DESTDIR.patch
 URL:		http://www.jwz.org/xdaliclock/
-#BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
+Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_appdefsdir	%{_datadir}/X11/app-defaults
