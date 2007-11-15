@@ -15,7 +15,7 @@ Patch0:		%{name}-shape-cycle.patch
 Patch1:		%{name}-DESTDIR.patch
 URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	autoconf
-#BuildRequires:	automake
+BuildRequires:	automake
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
 Requires:	xorg-lib-libXt >= 1.0.0
