@@ -3,12 +3,12 @@ Summary(de.UTF-8):	Marcs Lieblingsuhr
 Summary(pl.UTF-8):	Ulubiony zegar Marca
 Summary(tr.UTF-8):	Marc'ın gözde saati
 Name:		xdaliclock
-Version:	2.33
+Version:	2.34
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
-# Source0-md5:	48857715ca1a4fa90597140b9b902564
+# Source0-md5:	e3fd48ae881d1b3194584ef92dda67fb
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-shape-cycle.patch
