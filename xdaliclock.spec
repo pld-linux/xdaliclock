@@ -3,12 +3,12 @@ Summary(de.UTF-8):	Marcs Lieblingsuhr
 Summary(pl.UTF-8):	Ulubiony zegar Marca
 Summary(tr.UTF-8):	Marc'ın gözde saati
 Name:		xdaliclock
-Version:	2.34
+Version:	2.35
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://www.jwz.org/xdaliclock/%{name}-%{version}.tar.gz
-# Source0-md5:	e3fd48ae881d1b3194584ef92dda67fb
+# Source0-md5:	fd49a2635bb479c69ebef557ce39233d
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-shape-cycle.patch
@@ -16,6 +16,7 @@ Patch1:		%{name}-DESTDIR.patch
 URL:		http://www.jwz.org/xdaliclock/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	sed >= 4.0
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
 Requires:	xorg-lib-libXt >= 1.0.0
@@ -44,6 +45,7 @@ wyświetlać inne czcionki.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%{__sed} -i 's,numbers_big,font,' X11/configure.in
 
 %build
 cp -f /usr/share/automake/config.sub .
